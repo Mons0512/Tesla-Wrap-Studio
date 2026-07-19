@@ -6,9 +6,7 @@ interface FeatureDevelopmentDialogProps {
 export const FeatureDevelopmentDialog = ({ isOpen, onClose }: FeatureDevelopmentDialogProps) => {
   if (!isOpen) return null;
 
-  const galleryBaseUrl = import.meta.env.VITE_GALLERY_URL || 
-    window.location.origin.replace('studio', 'gallery') || 
-    'https://gallery.tesla-wrap.com';
+  const galleryBaseUrl = 'https://www.tesla-wrap.com/ai';
 
   const handleVisitGallery = () => {
     window.open(galleryBaseUrl, '_blank');

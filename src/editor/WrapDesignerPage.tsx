@@ -8,6 +8,8 @@ import { PropertiesPanel } from './PropertiesPanel';
 import { GodotViewer } from '../viewer/GodotViewer';
 import { NewProjectDialog } from './components/NewProjectDialog';
 import { UnsavedChangesDialog } from './components/UnsavedChangesDialog';
+import { MaintenanceBanner } from '../components/MaintenanceBanner';
+import { MaintenanceNoticeDialog } from '../components/MaintenanceNoticeDialog';
 import { useEditorStore } from './state/useEditorStore';
 import { useAuth } from '../contexts/AuthContext';
 import { loadProjectFromSupabase } from '../utils/supabaseProjects';
@@ -340,6 +342,8 @@ export const WrapDesignerPage = () => {
 
   return (
     <div className="h-screen flex flex-col bg-gradient-to-br from-tesla-black via-[#3a3b3c] to-tesla-black overflow-hidden">
+      <MaintenanceBanner />
+      <MaintenanceNoticeDialog />
       <div className="p-1 relative z-[100]">
         <Toolbar
           stageRef={stageRef}

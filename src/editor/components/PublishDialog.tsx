@@ -111,9 +111,7 @@ export function PublishDialog({ isOpen, onClose, stageRef }: PublishDialogProps)
       }
 
       // Success!
-      const galleryBaseUrl = import.meta.env.VITE_GALLERY_URL || 
-        window.location.origin.replace('studio', 'gallery') || 
-        'https://gallery.tesla-wrap.com'
+      const galleryBaseUrl = 'https://tesla-wrap.com'
       const galleryUrl = `${galleryBaseUrl}/design/${designId}`
       setSuccess(`Design published! View it in the gallery.`)
       
